@@ -1,3 +1,90 @@
-h1 {
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Lobster&subset=latin-ext');
+
+html {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+body {
+	margin: 0 !important;
+	position: relative;
+}
+
+h1, h2 {
+	font-family: 'Lobster', cursive;
 	text-align: center;
+}
+
+h1 {
+	font-size: 50px;
+	margin: 10px 0;
+}
+
+p {
+	text-align: justify;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+header, nav, main, footer {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 10px 0;
+	background: rgba(0, 0, 0, 0.9);
+	color: #EFC050;
+	/*#5484A4;*/
+}
+
+nav {
+	width: 1070px;
+	max-width: 100%;
+	margin: 0 auto;
+	background: #EFC050;
+}
+
+nav ul {
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-around;
+	list-style-type: none;
+}
+
+main {
+	width: 1070px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 20px;
+	background: #FDF5E6;
+	box-sizing: border-box;
+}
+
+footer {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 5px;
+	background: rgba(0, 0, 0, 0.9);
+	color: #EFC050;
+}
+
+footer h2 {
+	margin: 0;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
 }
