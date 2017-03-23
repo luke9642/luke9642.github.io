@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	$("#AboutMe").load("Content/AboutMe_Pol.html");
+	$("#CV").load("Content/CV_Pol.html");
+	$("#Contact").load("Content/Contact_Pol.html");
 	var navTop = $('nav').offset().top;
 	var navHeight = $('nav').outerHeight(true);
 	var difference = navHeight;
@@ -81,10 +84,6 @@ $(document).ready(function() {
 	$('#up').click(function() { $('body').stop().animate({scrollTop: 0}, '500', 'swing')});
 
 	$('#theme li').click(function() { changeTheme($(this).attr('id')); });
-
-	$("#AboutMe").load("Content/AboutMe_Pol.html");
-	$("#CV").load("Content/CV_Pol.html");
-	$("#Contact").load("Content/Contact_Pol.html");
 
 	stickyNav();
 	menuColor();
