@@ -1,0 +1,53 @@
+.theme4 {
+	background: #4267B2;
+	/*#29487D*/
+}
+
+.theme4 header {
+	color: #FFF;
+}
+
+.theme4 nav {
+	background: #29487D;
+	color: #FFF;
+}
+
+.theme4 nav ul li:hover {
+	color: #FFF;
+}
+
+.theme4 footer h2 {
+	color: #FFF;
+}
+
+.theme4 .sectionHeader {
+	opacity: 0.3;
+	color: #29487D;
+}
+
+.theme4 #up {
+	background: #FFF;
+	color: #4267B2;
+}
+
+.theme4 #up:hover {
+	color: #29487D;
+}
+
+.theme4 .checked {
+	color: #FFF;
+}
+
+.theme4 .checked:before, .theme4 .checked:after {
+	color: #FFF;
+}
+
+@media (min-width: 1000px) {
+	.theme4 .checked:hover {
+		color: #FFF;
+	}
+
+	.theme4 .checked:hover:before, .theme4 .checked:hover:after {
+		color: #FFF;
+	}
+}

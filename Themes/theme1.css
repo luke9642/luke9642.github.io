@@ -1,0 +1,59 @@
+/*#5484A4 #FDF5E6*/
+
+body {
+	background: #E9EBEE;
+}
+
+header {
+	background: rgba(0, 0, 0, 0.8);
+	color: #EFC050;
+}
+
+nav {
+	background: #EFC050;
+}
+
+nav ul li:hover {
+	background: #000;
+}
+
+nav ul li:hover, nav ul li:hover:before, nav ul li:hover:after {
+	color: #EFC050;
+}
+
+section {
+	background: #FFF;
+	border-radius: 4px;
+}
+
+footer {
+	background: rgba(0, 0, 0, 0.8);
+	color: #EFC050;
+}
+
+.sectionHeader {
+	opacity: 0.3;
+	color: #000;
+}
+
+#up {
+	background: #EFC050;
+	color: initial;
+}
+
+#up:hover {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+#languageTheme  div > ul {
+	background: #000;
+}
+
+#languageTheme  div > ul li:hover {
+	background: #EFC050;
+	color: #000;
+}
+
+#languageTheme div:hover {
+	background: #000;
+}

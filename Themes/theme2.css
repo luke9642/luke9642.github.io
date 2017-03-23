@@ -1,0 +1,19 @@
+.theme2 {
+	background: url('Table.jpg');
+}
+
+.theme2 nav ul li {
+	background: rgb(254, 252, 201);
+}
+
+.theme2 nav ul li:hover {
+	background: #000;
+	color: rgb(246, 245, 129);
+}
+
+.theme2 section {
+	background: -webkit-linear-gradient(-135deg, rgb(246, 245, 129), rgb(254, 252, 201) 30%);
+	background: -o-linear-gradient(-135deg, rgb(246, 245, 129), rgb(254, 252, 201) 30%);
+	background: -moz-linear-gradient(-135deg, rgb(246, 245, 129), rgb(254, 252, 201) 30%);
+	background: linear-gradient(-135deg, rgb(246, 245, 129), rgb(254, 252, 201) 30%);
+}
