@@ -17,7 +17,7 @@ $(document).ready(function() {
         if(currentLang == "pol") {
             $(".heading a").load("Content/pol/Heading.html");
             $("#language .change").load("Content/pol/Language.html");
-            $("#theme").load("Content/pol/Theme.html");
+            //$("#theme").load("Content/pol/Theme.html");
             $("nav").load("Content/pol/Nav.html");
             $("#AboutMe").load("Content/pol/AboutMe.html");
             $("#CV").load("Content/pol/CV.html");
@@ -25,7 +25,7 @@ $(document).ready(function() {
         } else {
             $(".heading a").load("Content/eng/Heading.html");
             $("#language .change").load("Content/eng/Language.html");
-            $("#theme").load("Content/eng/Theme.html");
+            //$("#theme").load("Content/eng/Theme.html");
             $("nav").load("Content/eng/Nav.html");
             $("#AboutMe").load("Content/eng/AboutMe.html");
             $("#CV").load("Content/eng/CV.html");
