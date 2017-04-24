@@ -48,4 +48,4 @@ function animations() {
 
 	stickyNav();
 	menuColor();
-});
+}
