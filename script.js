@@ -49,13 +49,17 @@ $(document).ready(function() {
 		setCookie("language", lang);
 		currentLang = lang;
 		if(currentLang == "pol") {
-			$("#AboutMe").load("Content/AboutMePol.html");
-			$("#CV").load("Content/CVPol.html");
-			$("#Contact").load("Content/ContactPol.html");
+			$(".heading a").load("Content/pol/Heading.html");
+			$("#language").load("Content/pol/Language.html");
+			$("#theme").load("Content/pol/Theme.html");
+			$("nav").load("Content/pol/Nav.html");
+			$("main").load("Content/pol/Section.html");
 		} else {
-			$("#AboutMe").load("Content/AboutMeEng.html");
-			$("#CV").load("Content/CVEng.html");
-			$("#Contact").load("Content/ContactEng.html");
+			$(".heading a").load("Content/eng/Heading.html");
+			$("#language").load("Content/eng/Language.html");
+			$("#theme").load("Content/eng/Theme.html");
+			$("nav").load("Content/eng/Nav.html");
+			$("main").load("Content/eng/Section.html");
 		}
 	}
 
