@@ -13,14 +13,12 @@ function cookies() {
             $("#theme").load("Content/pol/Theme.html");
             $("nav").load("Content/pol/Nav.html");
             $("main").load("Content/pol/Section.html");
-            Console.log("pol");
         } else {
             $(".heading a").load("Content/eng/Heading.html");
             $("#language").load("Content/eng/Language.html");
             $("#theme").load("Content/eng/Theme.html");
             $("nav").load("Content/eng/Nav.html");
             $("main").load("Content/eng/Section.html");
-            Console.log("eng");
         }
     }
 
