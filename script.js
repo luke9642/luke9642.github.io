@@ -92,12 +92,12 @@ $(document).ready(function() {
 		if(theme != "")
 			changeTheme(theme);
 		else
-			setCookie(defaultTheme);
+			setCookie("theme", defaultTheme);
 		var language = getCookie("language");
 		if(language != "")
 			changeLanguage(language);
 		else
-			setCookie(defaultLang);
+			setCookie("language", defaultLang);
 	}
 
 	$(window).scroll(function() { stickyNav(); menuColor(); });
