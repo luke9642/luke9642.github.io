@@ -12,13 +12,17 @@ $(document).ready(function() {
             $("#language").load("Content/pol/Language.html");
             $("#theme").load("Content/pol/Theme.html");
             $("nav").load("Content/pol/Nav.html");
-            $("main").load("Content/pol/Section.html");
+            $("#AboutMe").load("Content/pol/AboutMe.html");
+            $("#CV").load("Content/pol/CV.html");
+            $("#Contact").load("Content/pol/Contact.html");
         } else {
             $(".heading a").load("Content/eng/Heading.html");
             $("#language").load("Content/eng/Language.html");
             $("#theme").load("Content/eng/Theme.html");
             $("nav").load("Content/eng/Nav.html");
-            $("main").load("Content/eng/Section.html");
+            $("#AboutMe").load("Content/eng/AboutMe.html");
+            $("#CV").load("Content/eng/CV.html");
+            $("#Contact").load("Content/eng/Contact.html");
         }
     }
 
