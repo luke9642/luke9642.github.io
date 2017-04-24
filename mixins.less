@@ -1,0 +1,48 @@
+// main: styles.less
+
+@color-black: #000;
+@color-brown: rgb(86, 51, 0);
+@color-dark-green: rgb(19, 49, 23);
+@color-light-green: rgb(42, 84, 44);
+@color-dark-blue: #29487D;
+@color-blue: #4267B2;
+@color-light-blue: #5484A4;
+@color-dark-yellow: #EFC050;
+@color-yellow: rgb(246, 245, 129);
+@color-light-yellow: rgb(254, 252, 201);
+@color-cream: #FDF5E6;
+@color-dark-grey: #8A9492;
+@color-grey: #BDC7C5;
+@color-light-grey: #E9EBEE;
+@color-white: #FFF;
+
+.display(@display) when (@display = flex) {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+.transform-rotate(@rotate) {
+    -ms-transform: rotate(@rotate);
+    -webkit-transform: rotate(@rotate);
+    transform: rotate(@rotate);
+}
+
+.background-radial-gradient(@color1, @color2) {
+    background: -webkit-radial-gradient(@color1, @color2);
+    background: -o-radial-gradient(@color1, @color2);
+    background: -moz-radial-gradient(@color1, @color2);
+    background: radial-gradient(@color1, @color2);
+}
+
+.background-linear-gradient(@color1, @color2) {
+    background: -webkit-linear-gradient(-135deg, @color1, @color2 30%);
+    background: -o-linear-gradient(-135deg, @color1, @color2 30%);
+    background: -moz-linear-gradient(-135deg, @color1, @color2 30%);
+    background: linear-gradient(-135deg, @color1, @color2 30%);
+}

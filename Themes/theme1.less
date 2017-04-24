@@ -1,0 +1,63 @@
+// main: themes.less
+
+body {
+	background: @color-light-grey;
+}
+
+header {
+	background: rgba(0, 0, 0, 0.85);
+	color: @color-dark-yellow;
+}
+
+nav {
+	background: @color-dark-yellow;
+}
+
+nav ul li:hover {
+	background: rgba(0, 0, 0, 0.85);
+
+	&, &:before, &:after {
+		color: @color-dark-yellow;
+	}
+}
+
+section {
+	background: @color-white;
+	border-radius: 4px;
+}
+
+footer {
+	background: rgba(0, 0, 0, 0.85);
+	color: @color-dark-yellow;
+}
+
+.sectionHeader {
+	opacity: 0.3;
+	color: @color-black;
+}
+
+#up {
+	background: @color-dark-yellow;
+	color: initial;
+
+	&:hover {
+		color: rgba(0, 0, 0, 0.5);
+	}
+}
+
+#languageTheme {
+	div {
+		&:hover {
+			background: @color-black;
+		}
+
+		& > ul {
+			background: @color-black;
+
+			li:hover {
+				background: @color-dark-yellow;
+				color: @color-black;
+			}
+		}
+	}
+}

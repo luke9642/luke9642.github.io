@@ -4,12 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text/css" href="Themes/theme1.css">
-<link rel="stylesheet" type="text/css" href="Themes/theme2.css">
-<link rel="stylesheet" type="text/css" href="Themes/theme3.css">
-<link rel="stylesheet" type="text/css" href="Themes/theme4.css">
-<link rel="stylesheet" type="text/css" href="rwd.css">
+<link rel="stylesheet" type="text/css" href="styles.css">
 <script src="jquery-3.1.1.min.js"></script>
 <script src="script.js"></script>
 <script>
@@ -19,13 +14,13 @@
 <body>
 	<header>
 		<div class="wrapper">
-			<h1><a href="index.html">Hello World</a></h1>
+			<h1 class="heading"><a href="index.html">Hello World</a></h1>
 			<div id="languageTheme">
 				<div id="language">
 					Change language
 					<ul>
-						<li>Polski</li>
-						<li>English</li>
+						<li id="pol">Polski</li>
+						<li id="eng">English</li>
 					</ul>
 				</div>
 				<div id="theme">
@@ -49,27 +44,8 @@
 	</nav>
 	<main>
 		<section id="AboutMe">
-			<h2 class="sectionHeader">About me</h2>
-			<p>
-			    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id metus nec lectus congue sollicitudin. Ut in hendrerit ex, vitae scelerisque ante. Mauris ut porta tortor. Vivamus justo est, maximus eu nibh ut, blandit auctor massa. Quisque id tortor ut quam rutrum tincidunt id nec libero. Fusce rhoncus libero in justo luctus viverra. Integer et quam quis mi finibus ultrices. Donec finibus ante at libero volutpat tempor. Nunc dictum vestibulum massa eu ornare. Nam nunc arcu, pellentesque et dolor vitae, pretium euismod velit. Aliquam molestie blandit rutrum. Suspendisse accumsan felis ac libero dignissim, eget pharetra est volutpat. Etiam elementum odio in enim dapibus, sit amet accumsan diam venenatis. Nunc at ante ut nibh porta porttitor in id dui.
-
-			    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id metus nec lectus congue sollicitudin. Ut in hendrerit ex, vitae scelerisque ante. Mauris ut porta tortor. Vivamus justo est, maximus eu nibh ut, blandit auctor massa. Quisque id tortor ut quam rutrum tincidunt id nec libero. Fusce rhoncus libero in justo luctus viverra. Integer et quam quis mi finibus ultrices. Donec finibus ante at libero volutpat tempor. Nunc dictum vestibulum massa eu ornare. Nam nunc arcu, pellentesque et dolor vitae, pretium euismod velit. Aliquam molestie blandit rutrum. Suspendisse accumsan felis ac libero dignissim, eget pharetra est volutpat. Etiam elementum odio in enim dapibus, sit amet accumsan diam venenatis. Nunc at ante ut nibh porta porttitor in id dui.
-
-			    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id metus nec lectus congue sollicitudin. Ut in hendrerit ex, vitae scelerisque ante. Mauris ut porta tortor. Vivamus justo est, maximus eu nibh ut, blandit auctor massa. Quisque id tortor ut quam rutrum tincidunt id nec libero. Fusce rhoncus libero in justo luctus viverra. Integer et quam quis mi finibus ultrices. Donec finibus ante at libero volutpat tempor. Nunc dictum vestibulum massa eu ornare. Nam nunc arcu, pellentesque et dolor vitae, pretium euismod velit. Aliquam molestie blandit rutrum. Suspendisse accumsan felis ac libero dignissim, eget pharetra est volutpat. Etiam elementum odio in enim dapibus, sit amet accumsan diam venenatis. Nunc at ante ut nibh porta porttitor in id dui.
-			</p>
 		</section>
 		<section id="CV">
-			<h2 class="sectionHeader">CV</h2>
-			<p>
-			    Proin eget mollis augue, eget bibendum neque. Mauris scelerisque nulla turpis, nec faucibus nulla cursus in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ultricies, erat condimentum commodo lobortis, neque ante elementum nibh, et congue eros purus nec mi. Integer vestibulum non urna vel mattis. Duis cursus porttitor interdum. Pellentesque scelerisque elementum turpis, nec facilisis justo congue sed. Fusce eu arcu pharetra, elementum nulla eget, euismod erat. Suspendisse non placerat nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam diam odio, blandit ac iaculis in, efficitur ac orci. Phasellus sed augue dignissim, suscipit tellus id, porttitor velit. In fermentum consequat nisl ut rhoncus. Sed quis sagittis libero.
-
-			    Proin eget mollis augue, eget bibendum neque. Mauris scelerisque nulla turpis, nec faucibus nulla cursus in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ultricies, erat condimentum commodo lobortis, neque ante elementum nibh, et congue eros purus nec mi. Integer vestibulum non urna vel mattis. Duis cursus porttitor interdum. Pellentesque scelerisque elementum turpis, nec facilisis justo congue sed. Fusce eu arcu pharetra, elementum nulla eget, euismod erat. Suspendisse non placerat nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam diam odio, blandit ac iaculis in, efficitur ac orci. Phasellus sed augue dignissim, suscipit tellus id, porttitor velit. In fermentum consequat nisl ut rhoncus. Sed quis sagittis libero.
-
-			    Proin eget mollis augue, eget bibendum neque. Mauris scelerisque nulla turpis, nec faucibus nulla cursus in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ultricies, erat condimentum commodo lobortis, neque ante elementum nibh, et congue eros purus nec mi. Integer vestibulum non urna vel mattis. Duis cursus porttitor interdum. Pellentesque scelerisque elementum turpis, nec facilisis justo congue sed. Fusce eu arcu pharetra, elementum nulla eget, euismod erat. Suspendisse non placerat nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam diam odio, blandit ac iaculis in, efficitur ac orci. Phasellus sed augue dignissim, suscipit tellus id, porttitor velit. In fermentum consequat nisl ut rhoncus. Sed quis sagittis libero.
-			</p>
-			<p>
-			    Morbi vel quam elit. Morbi libero justo, auctor nec pellentesque eu, tempus eget lectus. Cras ultrices velit vulputate cursus elementum. Fusce mi lacus, luctus nec metus et, venenatis dapibus turpis. Aliquam quis sapien euismod, interdum urna vitae, lobortis augue. Morbi consequat ipsum at mi aliquet, ac tempus est vestibulum. Mauris cursus lorem sed metus iaculis sodales. Aliquam at posuere ipsum. Cras eget erat sit amet sapien tempus mattis.
-			</p>
 		</section>
 		<section id="Contact">
 		</section>

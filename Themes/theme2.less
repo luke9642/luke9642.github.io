@@ -1,0 +1,35 @@
+// main: themes.less
+
+.theme2 {
+	background: url('Themes/Table.jpg');
+
+	header {
+		color: @color-yellow;
+	}
+
+	nav ul li {
+		background: @color-yellow;
+
+		&:hover {
+			background: @color-light-yellow;
+			color: @color-black;
+		}
+	}
+
+	section {
+		.background-linear-gradient(@color-yellow, @color-light-yellow);
+	}
+
+	footer {
+		color: @color-yellow;
+	}
+
+	#up {
+		background: @color-yellow;
+		color: initial;
+	}
+
+	#languageTheme div > ul li:hover {
+		background: @color-yellow;
+	}
+}
