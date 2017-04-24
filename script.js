@@ -67,16 +67,15 @@ $(document).ready(function() {
 	}
 
 	function setCookie(id, value) {
-		var d = new Date();
-		d.setTime(d.getTime() + (10000*30));
-		var expires = "expires="+ d.toUTCString();
-		document.cookie = id + "=" + value + ";" + expires + ";";
+		var date = new Date();
+		date.setTime(date.getTime() + (10000*30));
+		var expires = "expires="+ date.toUTCString();
+		document.cookie = id + "=" + value + ";" + expires + ";path=/";
 	}
 
-	function getCookie(name) {
-		name = name + "=";
-		var decodedCookie = decodeURIComponent(document.cookie);
-	    var ca = decodedCookie.split(';');
+	function getCookie(cname) {
+		var name = cname + "=";
+	    var ca = document.cookie.split(';');
 	    for(var i = 0; i < ca.length; ++i) {
 	        var c = ca[i];
 	        while (c.charAt(0) == ' ')
@@ -92,12 +91,12 @@ $(document).ready(function() {
 		if(theme != "")
 			changeTheme(theme);
 		else
-			setCookie("theme", defaultTheme);
+			changeTheme(defaultTheme);
 		var language = getCookie("language");
 		if(language != "")
 			changeLanguage(language);
 		else
-			setCookie("language", defaultLang);
+			changeLanguage(defaultLang);
 	}
 
 	$(window).scroll(function() { stickyNav(); menuColor(); });
