@@ -1,13 +1,19 @@
 // main: styles.less
 
+//rgb(236, 168, 175)
+//rgb(225, 167, 1)
+//#7d8695
+
 @color-black: #000;
 @color-brown: rgb(86, 51, 0);
 @color-dark-green: rgb(19, 49, 23);
-@color-light-green: rgb(42, 84, 44);
+@color-green: rgb(42, 84, 44);
+@color-light-green: rgb(190, 224, 100);
 @color-dark-blue: #29487D;
 @color-blue: #4267B2;
 @color-light-blue: #5484A4;
 @color-dark-yellow: #EFC050;
+@color-very-dark-yellow: @color-dark-yellow - #555;
 @color-yellow: rgb(246, 245, 129);
 @color-light-yellow: rgb(254, 252, 201);
 @color-cream: #FDF5E6;
@@ -15,6 +21,8 @@
 @color-grey: #BDC7C5;
 @color-light-grey: #E9EBEE;
 @color-white: #FFF;
+
+@color-dark: #262a36;
 
 .display(@display) when (@display = flex) {
     display: -webkit-flex;
@@ -45,4 +53,61 @@
     background: -o-linear-gradient(-135deg, @color1, @color2 30%);
     background: -moz-linear-gradient(-135deg, @color1, @color2 30%);
     background: linear-gradient(-135deg, @color1, @color2 30%);
+}
+
+.theme-color(@header-color, @nav-color, @section-color, @footer-color, @up-color) {
+	header {
+		color: @header-color;
+	}
+
+	nav ul li {
+        color: @nav-color;
+	}
+
+	section {
+		color: @section-color
+	}
+
+	footer {
+		color: @footer-color;
+	}
+
+	#up {
+		color: @up-color;
+	}
+}
+
+.theme-background(@background, @nav-background, @section-background, @up-background) {
+    background: @background;
+
+	nav ul li {
+		background: @nav-background;
+	}
+
+	section {
+		background: @section-background;
+	}
+
+	#up {
+		background: @up-background;
+	}
+}
+
+.theme-hover(@nav-color-hover, @nav-background-hover, @up-background-hover, @languageTheme-color-hover, @languageTheme-background-hover) {
+	nav ul li:hover {
+		background: @nav-background-hover;
+
+        &, &:before, &:after {
+    		color: @nav-color-hover;
+    	}
+	}
+
+	#up:hover {
+		background: @up-background-hover;
+	}
+
+	#languageTheme div > ul li:hover {
+        color: @languageTheme-color-hover;
+		background: @languageTheme-background-hover;
+	}
 }

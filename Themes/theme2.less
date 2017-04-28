@@ -1,35 +1,21 @@
 // main: themes.less
 
 .theme2 {
-	background: url('Themes/Table.jpg');
-
-	header {
-		color: @color-yellow;
-	}
-
-	nav ul li {
-		background: @color-yellow;
-
-		&:hover {
-			background: @color-light-yellow;
-			color: @color-black;
-		}
-	}
+	.theme-color(@color-yellow, initial, initial, @color-yellow, initial);
+	.theme-background(url('Themes/Table.jpg'), @color-yellow, initial, @color-yellow);
+	.theme-hover(@color-black, @color-light-yellow, @color-light-yellow, initial, @color-yellow);
 
 	section {
-		.background-linear-gradient(@color-yellow, @color-light-yellow);
-	}
+		&:nth-of-type(3n+1) {
+			.background-linear-gradient(@color-yellow, @color-light-yellow);
+		}
 
-	footer {
-		color: @color-yellow;
-	}
+		&:nth-of-type(3n+2) {
+			.background-linear-gradient(@color-light-green, @color-light-green + #333333);
+		}
 
-	#up {
-		background: @color-yellow;
-		color: initial;
-	}
-
-	#languageTheme div > ul li:hover {
-		background: @color-yellow;
+		&:nth-of-type(3n+3) {
+			.background-linear-gradient(rgb(1, 176, 219) + #888888, rgb(193, 232, 232));
+		}
 	}
 }

@@ -10,6 +10,19 @@ $(document).ready(function() {
 	var currentTheme;
 	var defaultLang = "pol";
 	var currentLang;
+	var flag = true;
+
+	function init() {
+		navTop = $('nav').offset().top;
+		navHeight = $('nav').outerHeight(true);
+		difference = navHeight;
+		aboutMeTop = $('#AboutMe').offset().top;
+		CVTop = $('#CV').offset().top;
+		ContactTop = $('#Contact').offset().top;
+		height = -100;
+		defaultTheme = "theme1";
+		defaultLang = "pol";
+	}
 
 	function stickyNav() {
 		var scrollTop = $(window).scrollTop();
@@ -45,29 +58,25 @@ $(document).ready(function() {
 		}
 	};
 
-    function changeLanguage(lang) {
+    function setLanguage(lang) {
+		var path;
         setCookie("language", lang);
         currentLang = lang;
-        if(currentLang == "pol") {
-            $(".heading a").load("Content/pol/Heading.html");
-            $("#language .change").load("Content/pol/Language.html");
-            //$("#theme").load("Content/pol/Theme.html");
-            $("nav").load("Content/pol/Nav.html");
-            $("#AboutMe").load("Content/pol/AboutMe.html");
-            $("#CV").load("Content/pol/CV.html");
-            $("#Contact").load("Content/pol/Contact.html");
-        } else {
-            $(".heading a").load("Content/eng/Heading.html");
-            $("#language .change").load("Content/eng/Language.html");
-            //$("#theme").load("Content/eng/Theme.html");
-            $("nav").load("Content/eng/Nav.html");
-            $("#AboutMe").load("Content/eng/AboutMe.html");
-            $("#CV").load("Content/eng/CV.html");
-            $("#Contact").load("Content/eng/Contact.html");
-        }
+        if(currentLang == "pol")
+			path = "Content/pol/";
+        else
+			path = "Content/eng/";
+		$(".heading a").load(path + "Heading.html");
+		$("#language").load(path + "Language.html");
+		$("#theme").load(path + "Theme.html");
+		$("nav").load(path + "Nav.html");
+		$("#AboutMe").load(path + "AboutMe.html");
+		$("#CV").load(path + "CV.html");
+		$("#Contact").load(path + "Contact.html");
+		init();
     }
 
-	function changeTheme(theme) {
+	function setTheme(theme) {
 		$('body').removeClass(currentTheme);
 		$('body').addClass(theme);
 		setCookie("theme", theme);
@@ -76,7 +85,7 @@ $(document).ready(function() {
 
 	function setCookie(id, value) {
 		var date = new Date();
-		date.setTime(date.getTime() + (10000*30));
+		date.setTime(date.getTime() + (10000000*30));
 		var expires = "expires="+ date.toUTCString();
 		document.cookie = id + "=" + value + ";" + expires + ";path=/";
 	}
@@ -97,20 +106,36 @@ $(document).ready(function() {
 	function checkCookies() {
 		var theme = getCookie("theme");
 		if(theme != "")
-			changeTheme(theme);
+			setTheme(theme);
 		else
-			changeTheme(defaultTheme);
+			setTheme(defaultTheme);
 		var language = getCookie("language");
 		if(language != "")
-			changeLanguage(language);
+			setLanguage(language);
 		else
-			changeLanguage(defaultLang);
+			setLanguage(defaultLang);
 	}
 
-	$(window).scroll(function() { stickyNav(); menuColor(); });
-	$('#up').click(function() { $('body').stop().animate({scrollTop: 0}, '500', 'swing')});
-	$('#language li').click(function() { changeLanguage($(this).attr('id')); });
-	$('#theme li').click(function() { changeTheme($(this).attr('id')); });
+	$(window).scroll(function() {
+		stickyNav();
+		menuColor();
+		if(flag) {
+			init();
+			flag = false;
+		}
+	});
+
+	$('#up').click(function() {
+		$('body').stop().animate({scrollTop: 0}, '500', 'swing');
+	});
+
+	$(document).on("click", "#language li", function() {
+		setLanguage($(this).attr('id'));
+	});
+
+	$(document).on("click", "#theme li", function() {
+		setTheme($(this).attr('id'));
+	});
 
 	stickyNav();
 	menuColor();

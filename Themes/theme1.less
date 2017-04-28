@@ -1,62 +1,35 @@
 // main: themes.less
 
 body {
-	background: @color-light-grey;
-}
+	.theme-color(@color-dark-yellow, initial, initial, @color-dark-yellow, initial);
+	.theme-background(@color-light-grey, @color-dark-yellow, @color-white, @color-dark-yellow);
+	.theme-hover(@color-dark-yellow, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.5), @color-black, @color-dark-yellow);
 
-header {
-	background: rgba(0, 0, 0, 0.85);
-	color: @color-dark-yellow;
-}
-
-nav {
-	background: @color-dark-yellow;
-}
-
-nav ul li:hover {
-	background: rgba(0, 0, 0, 0.85);
-
-	&, &:before, &:after {
-		color: @color-dark-yellow;
+	header {
+		background: rgba(0, 0, 0, 0.85);
 	}
-}
 
-section {
-	background: @color-white;
-	border-radius: 4px;
-}
-
-footer {
-	background: rgba(0, 0, 0, 0.85);
-	color: @color-dark-yellow;
-}
-
-.sectionHeader {
-	opacity: 0.3;
-	color: @color-black;
-}
-
-#up {
-	background: @color-dark-yellow;
-	color: initial;
-
-	&:hover {
-		color: rgba(0, 0, 0, 0.5);
+	section {
+		border-radius: 4px;
 	}
-}
 
-#languageTheme {
-	div {
-		&:hover {
-			background: @color-black;
-		}
+	footer {
+		background: rgba(0, 0, 0, 0.85);
+	}
 
-		& > ul {
-			background: @color-black;
+	.sectionHeader {
+		opacity: 0.3;
+		color: @color-black;
+	}
 
-			li:hover {
-				background: @color-dark-yellow;
-				color: @color-black;
+	#languageTheme {
+		div {
+			&:hover {
+				background: @color-black;
+			}
+
+			& > ul {
+				background: @color-black;
 			}
 		}
 	}

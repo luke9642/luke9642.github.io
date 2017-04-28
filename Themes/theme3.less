@@ -1,54 +1,23 @@
 // main: themes.less
 
 .theme3 {
-	background: url("Themes/Wood.jpg");
+	.theme-color(@color-grey, @color-black, @color-grey, @color-grey, @color-grey);
+	.theme-background(url("Themes/Wood.jpg"), @color-dark-grey, initial, @color-green);
+	.theme-hover(@color-dark-green, @color-grey, @color-dark-green, @color-grey, @color-green);
 
 	p {
 		font-size: 20px;
 	}
 
-	header {
-		color: @color-grey;
-	}
-
-	nav ul li {
-		background: @color-dark-grey;
-		color: @color-black;
-
-		&:hover {
-			color: @color-dark-green;
-			background: @color-grey;
-		}
-	}
-
 	section {
-		.background-radial-gradient(@color-light-green, @color-dark-green);
+		.background-radial-gradient(@color-green, @color-dark-green);
 		font-family: 'Caveat Brush', cursive;
-		color: @color-grey;
 		border: @color-grey solid 5px;
 	}
 
 	.sectionHeader {
 		color: @color-grey;
 		opacity: 0.7;
-	}
-
-	footer h2 {
-		color: @color-grey;
-	}
-
-	#up {
-		background: @color-light-green;
-		color: @color-grey;
-
-		&:hover {
-			background: @color-dark-green;
-		}
-	}
-
-	#languageTheme div > ul li:hover {
-		color: @color-grey;
-		background: @color-light-green;
 	}
 }
 

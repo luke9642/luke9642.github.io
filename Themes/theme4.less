@@ -1,37 +1,13 @@
 // main: themes.less
 
 .theme4 {
-	background: @color-blue;
-
-	header {
-		color: @color-white;
-	}
-
-	nav {
-		background: @color-dark-blue;
-		color: @color-white;
-
-		ul li:hover {
-			color: @color-white;
-		}
-	}
-
-	footer h2 {
-		color: @color-white;
-	}
+	.theme-color(@color-white, @color-white, initial, @color-white, @color-blue);
+	.theme-background(@color-blue, @color-dark-blue, @color-white, @color-white);
+	.theme-hover(@color-white, @color-black, @color-dark-blue, @color-white, @color-dark-blue);
 
 	.sectionHeader {
 		opacity: 0.3;
 		color: @color-dark-blue;
-	}
-
-	#up {
-		background: @color-white;
-		color: @color-blue;
-
-		&:hover {
-			color: @color-dark-blue;
-		}
 	}
 
 	.checked {
@@ -40,11 +16,6 @@
 		&:before, &:after {
 			color: @color-white;
 		}
-	}
-
-	#languageTheme div > ul li:hover {
-		color: @color-white;
-		background: @color-dark-blue;
 	}
 }
 
